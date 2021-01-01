@@ -19,17 +19,17 @@ int main()
     {
       void displayBoard();
 
-      // change turns
+      
       player = (player % 2) ? 1 : 2;
 
-      // get input
+      
       printf("Player %d, enter a number: ", player);
       scanf("%d", &choice);
 
-      // set the correct character based on player turn
+      
       mark = (player == 1) ? 'X' : 'O';
 
-      // set board based on user choice or invalid choice
+      
       markBoard(mark);
 
       gameStatus = checkForWin();
@@ -44,11 +44,7 @@ int main()
         printf("==>\aGame draw");
     return 0;
 }
-/*
-FUNCTION TO RETURN GAME STATUS
-1 FOR GAME IS OVER WITH result
--1 FOR GAME IS IN PROGRESS
-0 FOR GAME IS OVER AND DRAW (NO RESULT) */
+
 int checkForWin()
 {
     int returnValue=0;
@@ -87,7 +83,7 @@ int checkForWin()
         return returnValue;
 }
 
-/* FUNCTION TO DRAW BOARD FOR GAME WITH PLAYER MARK */
+
 
 
 void drawBoard()
@@ -112,10 +108,7 @@ void drawBoard()
     printf("     |     |     \n\n");}
 
 
-    /***************************************
-set the board with the correct character,
-x or o in the correct spot in the array
-****************************************/
+   
 void markBoard(char mark)
 {
     if (choice == 1 && square[1] == '1')
